@@ -1,4 +1,4 @@
-const API_KEY = process.env.TMDB_API_KEY
+const API_KEY = process.env.REACT_APP_API_KEY
 export default {
     fetchTrending:{
         title:'Trending',
@@ -10,48 +10,39 @@ export default {
     },
     fetchTrending:{
         title:'Trending',
-        url:`
-        https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=en-US&with_genres=28`
+        url:`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=en-US&with_genres=28`
     },
     fetchAdventure:{
         title:'Adventure',
-        url:`
-        https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=en-US&with_genres=12`
+        url:`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=en-US&with_genres=12`
     },
     fetchComedy:{
         title:'Comedy',
-        url:`
-        https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=en-US&with_genres=35`
+        url:`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=en-US&with_genres=35`
     },
     fetchCrime:{
         title:'Crime',
-        url:`
-        https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=en-US&with_genres=80`
+        url:`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=en-US&with_genres=80`
     },
     fetchHorror:{
         title:'Horror',
-        url:`
-        https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=en-US&with_genres=27`
+        url:`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=en-US&with_genres=27`
     },
     fetchAnimation:{
         title:'Animation',
-        url:`
-        https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=en-US&with_genres=16`
+        url:`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=en-US&with_genres=16`
     },
     fetchFantasy:{
         title:'Fantasy',
-        url:`
-        https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=en-US&with_genres=14`
+        url:`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=en-US&with_genres=14`
     },
     fetchMystery:{
         title:'Mystery',
-        url:`
-        https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=en-US&with_genres=9648`
+        url:`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=en-US&with_genres=9648`
     },
     fetchRomance:{
         title:'Romance',
-        url:`
-        https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=en-US&with_genres=10749`
+        url:`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=en-US&with_genres=10749`
     },
 
 }
