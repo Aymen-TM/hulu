@@ -1,7 +1,9 @@
 import React from 'react'
+import { useEffect } from 'react'
 import Thumbnail from '../components/Thumbnail'
 
 function Results({results}) {
+  
   
 
   return (

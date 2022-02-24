@@ -6,37 +6,29 @@ import requests from '../src/utils/request'
 
 
 function App() {
-  const [genre, setgenre] = useState('fetchTrending')
-  const [isLoading, setisLoading] = useState(true)
-  const [data, setdata] = useState({})
-  useEffect(() => {
-    const fetchjson =  ()=>{
-    var req = requests[genre]
-    fetch(req['url']).then(response => response.json()).then(result=>setdata(result['results']))
-    .catch((err)=>console.log(err))
-    
-    if(data.length>0){
-      setisLoading(false)
-    }else{
-      setisLoading(true)
-    }
-    
-    }
-    fetchjson()
-    
-  }, [genre])
-  
-  return (
-     <div className="h-screen">
-      <Header />
-      <Nav setgenre={setgenre} />
-      {console.log(data)}
-      { !isLoading && <Results results ={data}  /> }
-      
-    </div>
-  
-  
-  );
+const [genre, setgenre] = useState('fetchTrending')
+const [isLoading, setisLoading] = useState(true)
+const [data, setdata] = useState({})
+useEffect(() => {
+  const fetchjson = async ()=>{
+  var req = requests[genre]
+  await fetch(req['url']).then(response => response.json()).then(result=>setdata(result['results']))
+  .catch((err)=>console.log(err))
+  setisLoading(false)
+}
+  fetchjson()
+},[genre])
+
+return (
+<div className="h-screen">
+  <Header />
+  <Nav setgenre={setgenre} />
+  { !isLoading &&
+  <Results results={data} genre={genre} /> }
+</div>
+
+
+);
 }
 
 export default App;

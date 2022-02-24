@@ -10,7 +10,6 @@ return (
         <h1 className='text-white cursor-pointer duration-100 transition transform hover:scale-125 active:text-red-500 select-none'
             key={key} onClick={()=>{
                 setgenre(key)
-                console.log(url)
             }}>{title}</h1>
         ))
         }
